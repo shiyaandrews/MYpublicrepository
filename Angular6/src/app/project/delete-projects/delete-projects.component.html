@@ -1,0 +1,45 @@
+<br>
+<br>
+<form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)" >
+<div class="form-horizontal">
+    <h4>Project</h4>
+    <hr />
+    
+    <div class="form-group">
+        <label class="control-label col-md-2" for="project_name">project_name </label>
+        <div class="col-md-10">
+            <label class="control-label col-md-2" for="project_name">{{project?. project_name}}</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="start_date">StartDate</label>
+        <div class="col-md-10">
+            <label class="control-label col-md-2" for="start_date">{{project?.StartDate}}</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="end_date">EndDate</label>
+        <div class="col-md-10">
+            <label class="control-label col-md-2" for="end_date">{{project?.EndDate}}</label>
+          </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="client_name">Cname</label>
+        <div class="col-md-10">
+            <label class="control-label col-md-2" for="client_name">{{project?.Cname}}</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="delete" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+</form>
+<div>
+<a href="/project/show">Back to List</a>
+</div>

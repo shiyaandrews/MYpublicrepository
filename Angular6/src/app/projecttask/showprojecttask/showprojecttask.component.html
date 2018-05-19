@@ -1,0 +1,33 @@
+<br>
+<br>
+<br>
+
+<h1>
+  Task
+</h1>
+
+<p><a href="/projecttask/create">Create</a></p>
+<table class="table">
+  <tr>
+    <th>project_task_id</th>
+    <th>assigned_to</th>
+    <th>task_end_date</th>
+    <th>task_start_date</th>
+    <th>task_completion</th>
+    <th>user_story_id</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let tas of projecttask">
+    <td>{{tas.project_task_id}}</td>
+    <td>{{tas.assigned_to}}</td>
+    <td>{{tas.task_end_date}}</td>
+    <td>{{tas.task_start_date}}</td>
+    <td>{{tas.task_completion}}</td>
+    <td>{{tas.user_story_id}}</td>
+    <td>
+      <a href="/projecttask/edit/{{tas.project_task_id}}">Edit/</a>
+      <a href="/projecttask/delete/{{tas.project_task_id}}">Delete</a>
+    </td>
+  </tr>
+</table>
+

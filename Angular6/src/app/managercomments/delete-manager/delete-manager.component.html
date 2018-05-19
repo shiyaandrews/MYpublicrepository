@@ -1,0 +1,31 @@
+<br>
+<br>
+<form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)" >
+  <div class="form-horizontal">
+    <h4>Manager comments</h4>
+    <hr />
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="comments">comments</label>
+      <div class="col-md-10">
+          <label class="control-label col-md-2" for="comments">{{comment.comments}}</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="protaskId">Project task Id</label>
+      <div class="col-md-10">
+          <label class="control-label col-md-2" for="project_task_id">{{comment.project_task_id}}</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="delete" class="btn btn-default" />
+      </div>
+    </div>
+  </div>
+</form>
+<div>
+  <a href="/managercomments/show">Back to List</a>
+</div>

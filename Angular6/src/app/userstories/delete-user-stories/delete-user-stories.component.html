@@ -1,0 +1,32 @@
+<br>
+<br>
+<form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)" >
+    <div class="form-horizontal">
+        <h4>UserStories</h4>
+        <hr />
+        
+        <div class="form-group">
+            <label class="control-label col-md-2" for="story">story</label>
+            <div class="col-md-10">
+                <label class="control-label col-md-2" for="story">{{userstories?.story}}</label>
+              </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="project_id">project_id</label>
+            <div class="col-md-10">
+                <label class="control-label col-md-2" for="project_id">{{userstories?.project_id}}</label>
+              </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="delete" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+<div>
+    <a href="/userstories/show">Back to List</a>
+</div>
+

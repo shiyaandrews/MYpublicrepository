@@ -1,0 +1,65 @@
+<br>
+<br>
+<form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)" >
+<div class="form-horizontal">
+    <h4>Project</h4>
+    <hr />
+    
+    <div class="form-group">
+        <label class="control-label col-md-2" for="project_name">Project name</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" formControlName="project_name" type="text" value="" />
+            <div *ngIf="formData.controls.project_name.errors && (formData.controls.project_name.dirty || formData.controls.project_name.touched)" class="alert-danger" >
+                <div *ngIf="formData.controls.project_name.errors.required">
+                    Project name is required
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="start_date">Start Date</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" formControlName="start_date" type="datetime" value="" />
+        <div *ngIf="formData.controls.start_date.errors && (formData.controls.start_date.dirty || formData.controls.start_date.touched)" class="alert-danger" >
+            <div *ngIf="formData.controls.start_date.errors.required">
+              Start Date is required
+            </div>
+       </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="end_date">End Date</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" formControlName="end_date" type="datetime" value="" />
+            <div *ngIf="formData.controls.end_date.errors && (formData.controls.end_date.dirty || formData.controls.end_date.touched)" class="alert-danger" >
+                <div *ngIf="formData.controls.end_date.errors.required">
+                        End Date is required
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="client_name">Client name</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" formControlName="client_name" type="text" value="" />
+        <div *ngIf="formData.controls.client_name.errors && (formData.controls.client_name.dirty || formData.controls.client_name.touched)" class="alert-danger" >
+            <div *ngIf="formData.controls.client_name.errors.required">
+                    Client name is required
+            </div>
+        </div>  
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="create" class="btn btn-default" [disabled]="!formData.value" />
+        </div>
+    </div>
+</div>
+</form>
+<div>
+<a href="/project/show">Back to List</a>
+</div>
